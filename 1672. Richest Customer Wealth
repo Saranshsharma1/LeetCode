@@ -1,0 +1,15 @@
+class Solution {
+    public int maximumWealth(int[][] accounts) {
+        int maxWealth = 0;
+        for(int[] customers : accounts){
+            int currCustomer =0 ;
+            for(int bank : customers){
+                currCustomer += bank;
+            }
+            maxWealth = Math.max(maxWealth,currCustomer);
+        }
+        return maxWealth;
+    }
+    //Time complexity = O(n*m)
+    //Space Complexity = O(1)
+}
